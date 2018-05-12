@@ -1,0 +1,162 @@
+@charset "UTF-8";
+:root {
+    --header-height: 3rem;
+    --max-width: 1344px;
+    --gutter: 1rem;
+    --first-color: #007bdf;
+    --first-color-alt: #006dc6;
+    --second-color: #00cbff;
+    --second-color-alt: #00bff0;
+    --third-color: #ff3c32;
+    --third-color-alt: #ff2419;
+    --accent-color: #fba905;
+    --accent-color-alt: #f1a000;
+    --dark-color: #282d31;
+    --dark-color-alt: #141618;
+    --border-color: #dfe0e0;
+    --text-color: #53575a;
+    --body-bg: #fafdff;
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+
+    --font-title: 'Open Sans', sans-serif;
+    --font-body: 'Gentium Book Basic', serif;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+body {
+    background: #fafdff;
+    font-family: 
+}
+
+em, strong {
+    font-weight: 700;
+}
+
+ul {
+    padding-left: 0;
+    margin-left: 2rem;
+}
+
+body {
+    /* margin: var(--header-height) 0 0; */
+    margin: 0.1px;  
+    min-height: calc(100vh - 64px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+h1+.subtitle, h2+.subtitle, h3+.subtitle, h4+.subtitle, h5+.subtitle, h6+.subtitle {
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+article, blockquote, figure, iframe, ol, p, pre, section, ul, video {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+article+h2, blockquote+h2, figure+h2, iframe+h2, ol+h2, p+h2, pre+h2, section+h2, ul+h2, video+h2 {
+    padding-top: 1rem;
+}
+
+
+/**
+* MAIN
+*/
+
+.main-container {
+    /* width: calc(100% - 10vw); */
+    /* min-width: 1000px; */
+    height: 100vh;
+    background: #bfbfbf;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-header {
+    height: 360px;
+    background: #494949;
+}
+
+.main-header div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.header-info-cont [class*="header-info-sect-"]  {
+    height: calc(360px / 3);
+    width: 100%;
+    font-size: 36px;
+    color: white;
+    font-family: var(--font-title);
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.photo-cont {
+    background-image: url(./img/perfil.jpg);
+    width: 320px;
+    height: 360px;
+    object-fit: fill;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%, cover;
+}
+
+/**
+* Media Queries
+*/
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 300px) {
+    .main-container {
+        background: blue; 
+        /* width: 100%; */
+    }
+
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+    .main-container {
+        background: red; 
+        width: 100%;
+    }
+
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+    .main-container {
+        background: yellow; 
+        width: calc(100% - 5vw);
+        min-width: 768px;
+    }
+
+}
+
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+    .main-container {
+        width: 1023px;
+        background: orange; 
+    }
+
+}  
