@@ -94,7 +94,7 @@ article+h2, blockquote+h2, figure+h2, iframe+h2, ol+h2, p+h2, pre+h2, section+h2
 }
 
 .main-header div {
-    display: inline-block;
+    /* display: inline-block; */
     vertical-align: top;
 }
 
@@ -129,6 +129,25 @@ article+h2, blockquote+h2, figure+h2, iframe+h2, ol+h2, p+h2, pre+h2, section+h2
         background: blue; 
         /* width: 100%; */
     }
+    .main-header {
+        padding-top: 20px;
+        height: 320px;
+    }
+    .photo-cont {
+        margin: 5px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+    }
+
+    .header-info-cont [class*="header-info-sect-"] {
+        height: auto;
+        font-size: 25px;
+        display: inline-block;
+        margin: 7px 0;
+        text-align: center;
+    }    
 
 }
 
@@ -138,7 +157,16 @@ article+h2, blockquote+h2, figure+h2, iframe+h2, ol+h2, p+h2, pre+h2, section+h2
         background: red; 
         width: 100%;
     }
-
+    .main-header {
+        padding-top: 0px;
+        height: 360px;
+    }
+    .main-header div {
+        display: inline-block;
+    }
+    .header-info-cont [class*="header-info-sect-"] {
+        height: calc(360px / 3);
+    } 
 }
 
 /* TABLETS PORTRAIT */
